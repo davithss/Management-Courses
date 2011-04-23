@@ -1,0 +1,14 @@
+System of Course Management
+
+1. User
+1.1. Registration Form (It will create a username and password).
+1.2. Screen exclusively for the user to view your history.
+
+2. Administrator
+2.1. Insert, edit and update courses.
+2.2. Screens to display the acting courses, conducted and
+future.
+
+3. Public page with the courses available and the link
+registration by sending a login screen aiming to accomplish
+enrollment.
