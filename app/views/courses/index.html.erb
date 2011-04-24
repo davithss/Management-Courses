@@ -1,29 +1,26 @@
 <h1>Listing courses</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Begin date</th>
-    <th>End date</th>
-    <th>Body</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<% if @courses.present? %>
 
-<% @courses.each do |course| %>
-  <tr>
-    <td><%= course.title %></td>
-    <td><%= course.begin_date %></td>
-    <td><%= course.end_date %></td>
-    <td><%= course.body %></td>
-    <td><%= link_to 'Show', course %></td>
-    <td><%= link_to 'Edit', edit_course_path(course) %></td>
-    <td><%= link_to 'Destroy', course, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<ul class="list">	
+	<% @courses.each do |course| %>	
+    		<%= content_tag_for :li, course, :class => cycle(:odd, :even) do %>
+      		<%= link_to course.title.titleize, [course] %>
+
+			<div class="right">
+				<%= link_to 'Edit' , edit_course_path(course) %>
+				<%= link_to 'Destroy', course, :confirm => 'Are you sure?', :method => :delete %>
+			</div>
+	<% end %>
 <% end %>
-</table>
+</ul>
+<% else %>
+<p><%=t :empty, :collection => "courses" %></p>
+<% end %>
 
-<br />
-
-<%= link_to 'New Course', new_course_path %>
+<hr class="thick" />
+<div class="bar">	
+	<div class="right">
+		<%= link_to 'New Course', new_course_path %>
+	</div>
+</div>
