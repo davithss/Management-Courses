@@ -4,13 +4,12 @@
 
 <ul class="list">	
 	<% @courses.each do |course| %>	
-    		<%= content_tag_for :li, course, :class => cycle(:odd, :even) do %>
-      		<%= link_to course.title.titleize, [course] %>
-
-			<div class="right">
-				<%= link_to 'Edit' , edit_course_path(course) %>
-				<%= link_to 'Destroy', course, :confirm => 'Are you sure?', :method => :delete %>
-			</div>
+    	<%= content_tag_for :li, course, :class => cycle(:odd, :even) do %>
+      	<%= link_to course.title.titleize, [course] %>
+		<div class="right">
+			<%= link_to 'Edit' , edit_course_path(course) %>
+			<%= link_to 'Destroy', course, :confirm => 'Are you sure?', :method => :delete %>
+		</div>
 	<% end %>
 <% end %>
 </ul>
