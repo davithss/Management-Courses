@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ManagementCourses</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
+  <title>Management Courses</title>
+  <%= stylesheet_link_tag "admin", "scaffold" %>
+  <%= javascript_include_tag  "rails" %>
   <%= csrf_meta_tag %>
 </head>
 <body>
 
-<%= yield %>
+  <div id="wrapper">
+    <div id="header">
+      <div id="main-nav">
+        <%= menu do |m| %>
+          <%= m.dashboard 'Dashboard', "#" %>
+          <%= m.courses 'Assets Courses', courses_path %>
+          <%= m.assets 'Inative Courses', "#" %>
+          <%= m.changelog 'Changelog', "#" %>
+          <%= m.inquiries 'Inquiries', "#" %>
+        <% end %>
+      </div>
+    </div>
 
+    <div id="content-wrapper">
+      <div id="content">
+        <div class="in">
+            <%= yield %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<%= yield :bottom %>
 </body>
 </html>
