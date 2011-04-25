@@ -65,10 +65,10 @@ div#header #user-bar a, div#header #main-nav li {
   text-shadow: 1px 1px 1px #10526F;
   font-weight: bold;
   border: 1px solid #4A87A2;
-  background-image: -moz-linear-gradient(center top, #00B2D2, #0082AF);
-  background-image: -webkit-gradient(linear, 0% 0%, 0% bottom, from(#00B2D2), to(#0082AF));
+  background-image: -moz-linear-gradient(center top, #A10326, #930125);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% bottom, from(#A10326), to(#930125));
 
-  -pie-background: linear-gradient(center top, #00B2D2, #0082AF);
+  -pie-background: linear-gradient(center top, #A10326, #930125);
   behavior: url(/javascripts/vendor/PIE.htc);
 }
 
@@ -93,17 +93,17 @@ div#header #main-nav ul {
 div#header #main-nav li a { color: #FFF; }
 
 div#header #main-nav li.current {
-  text-shadow: 1px 1px 1px #FFF;
+  text-shadow: 1px 1px 1px #10526F;
   border-color: #cccccc;
   color: #666;
-  background-image: -moz-linear-gradient(center top, #f0f0f0, #d9d9d9);
-  background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#f0f0f0), to(#d9d9d9));
-  -pie-background: linear-gradient(center top, #f0f0f0, #d9d9d9);
+  background-image: -moz-linear-gradient(center top, #F4D4D4, #C9191D);
+  background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#F4D4D4), to(#C9191D));
+  -pie-background: linear-gradient(center top, #F4D4D4, #C9191D);
   behavior: url(/javascripts/vendor/PIE.htc);
 }
 
 div#header #main-nav li.current a {
-  color: #666;
+  color: #FFF;
 }
 
 /* content */
