@@ -1,6 +1,7 @@
 class Admin::CoursesController < Admin::AdminController
   
   menu_item :courses
+  before_filter :load_resources, :only => %w(new create edit update)
   
   def index
     @courses = Course.all
@@ -8,9 +9,9 @@ class Admin::CoursesController < Admin::AdminController
   end
   def show
     @course = Course.find(params[:id])
-     respond_with @course do |format|
-        format.html { render :layout => "application" }
-      end
+    respond_with @course do |format|
+    format.html { render :layout => "application" }
+  end
   end  
   def new
     @course = Course.new

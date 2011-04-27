@@ -1,0 +1,26 @@
+<h2>Courses</h2>
+
+<%- if @courses.present? -%>
+<ul class="list">
+  <% @courses.each do |course| %>
+    <%= content_tag_for :li, course, :class => cycle(:odd, :even) do %>
+      <%= link_to course.title.titleize, [:admin, course] %>
+
+      <div class="right">
+        <%= link_to_edit [:edit, :admin, course] %>,
+        <%= link_to_destroy [:admin, course] %>
+      </div>
+    <% end %>
+  <% end %>
+</ul>
+<%- else -%>
+  <p>You don't have any courses yet.</p>
+<%- end -%>
+
+<hr class="thick" />
+
+<div class="bar">
+  <div class="right">
+    <%= link_to 'New Post', new_admin_course_path, :class => "button" %>
+  </div>
+</div>
