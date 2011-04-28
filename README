@@ -9,8 +9,12 @@ System of Management Courses
 2.1. Insert, edit and update courses.
 2.2. Screens to display the acting courses, conducted and
 future.
+2.3. Manage users.
 
 3. Public page with the courses available and the link
 registration by sending a login screen aiming to accomplish
 enrollment.
 
+<b>Fork the project.</b>
+Make your feature addition or bug fix.
+Send me a pull request :)
